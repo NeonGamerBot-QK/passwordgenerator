@@ -14,7 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +36,86 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* @see https://github.com/somanath-goudar/react-password-generator/blob/master/src/App.css#L34-L44 */
+.copy__btn {
+  position: absolute;
+  align-items: left;
+  background: #3b3b98;
+  color: #fff;
+  border: none;
+  height: 40px;
+  padding: 10px;
+  cursor: pointer;
+  top: 3px;
+  right: 3px;
+}
+/* @see https://github.com/somanath-goudar/react-password-generator/blob/master/src/App.css#L25-L32*/
+.generator__password {
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 13px 10px;
+  text-align: bottom;
+  color: #fff;
+  /* height: 46px; */
+  margin-bottom: 15px;
+}
+.generator {
+  /* background: #23235b; */
+  background-image: linear-gradient(to left, rgb(37, 26, 58), rgb(56, 41, 100));
+  border-radius: 3px;
+  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+}
+.generator__header {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.horizontal-slider {
+  width: 100%;
+  max-width: 500px;
+  height: 10vh;
+  margin: auto;
+}
+.example-thumb {
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+  background: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+  border: 5px solid #3b3b98;
+  border-radius: 100%;
+  display: block;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 44%);
+}
+.example-thumb.active {
+  background-color: grey;
+}
+.example-track {
+  position: relative;
+  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+}
+.example-track.example-track-0 {
+  background: #3b3b98;
+}
+.horizontal-slider .example-track {
+  top: 20px;
+  height: 4px;
+}
+.horizontal-slider .example-thumb {
+  top: 12px;
+  width: 10px;
+  outline: none;
+  height: 10px;
+  line-height: 38px;
+}
+.generator__btn {
+  background: #3b3b98;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  font-size: 17px;
+  cursor: pointer;
 }
