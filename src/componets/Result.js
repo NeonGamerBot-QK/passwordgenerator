@@ -2,6 +2,9 @@ import { useState } from "react";
 import ReactSlider from "react-slider";
 import { ToastContainer, toast } from 'react-toast'
 export default function Result() {
+const log = (...text) => {
+if(process.env.NODE_ENV !== "production") console.log(...text)
+}
     const upperCase = "QWERTYUIOPASDFGHNMJKLZXCVBNM"
     const lowerCase = "qwertyuiopasdfghnmjklxcvbnm"
     const numbers = "0123456789"
@@ -50,7 +53,7 @@ setState({
 setResult(makePass(useUpper, useLowe, useStati, useNumbers, state.value))
 }
 if(result === "") setResult("No password config")
-console.log(result)
+log(result)
 const wave = () => {
     toast('Password copied!', {
       position: 'top-center',
@@ -107,7 +110,7 @@ return (
     min={7}
     max={20}
     onChange={(e) => {
-    console.log(e)
+    log(e)
         updateOptions(useUpper, useLower, useStatic, useNumbers, (e))
     }}
     value={state.value}
